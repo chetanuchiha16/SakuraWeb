@@ -1,0 +1,74 @@
+.dropdown button{
+    /* border:none; */
+    font-size: 20px;
+    background-color: bisque;
+    color:rgb(255, 0, 0);
+    cursor:pointer;
+    padding:10px 15px
+}
+
+.dropdown a {
+    padding: 10px 15px;
+    text-decoration: none;
+    color:black;
+    display: block;
+
+}
+
+.dropdown {
+    display: inline-block;
+}
+
+.dropdown a:hover {
+    background-color: gainsboro;
+}
+
+.dropdown .contents {
+    display: none;
+    padding: 10px 15px;
+    box-shadow: 3px 5px 5px black;
+    width:100px;
+    position:absolute;
+    background-color: aliceblue;
+}
+
+.dropdown:hover button{
+    background-color:hsla(208, 100%, 54%, 0.377);
+}
+
+
+.dropdown:hover .contents {
+    display:block;
+}
+
+/* .dropdown a{
+    display:none;
+    color:black;
+    text-decoration: none;
+    padding:10px 15px;
+}
+
+.dropdown:hover a  {
+    display:block;
+}
+
+.dropdown a:hover {
+    background-color: rgb(219, 210, 210);
+}
+.dropdown .contents{
+    position:absolute;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 3px 5px 3px black;
+
+} */
+
+/* .dropdown .contents{
+    display:none;
+}
+.dropdown button:hover ~ .contents  {
+    display:block;
+}
+
+.dropdown button:hover ~ .contents  {
+    color: rgb(0, 255, 42); 
+} */

@@ -1,0 +1,30 @@
+Folder PATH listing
+Volume serial number is B878-E1FD
+C:.
+³   structure.txt
+³   
+ÀÄÄÄjs-quests
+    ÃÄÄÄQuest_1_The_Battle
+    ³       index.html
+    ³       script.js
+    ³       style.css
+    ³       
+    ÃÄÄÄQuest_1_The_Foundations
+    ³       index.html
+    ³       index.js
+    ³       something.txt
+    ³       style.css
+    ³       
+    ÃÄÄÄQuest_2_The Arcane Numbers ?? and The Trials of Logics
+    ³       index.html
+    ³       script.js
+    ³       style.css
+    ³       
+    ÃÄÄÄQuest_2_The Elemental Duel ???
+    ³       index.html
+    ³       script.js
+    ³       style.css
+    ³       
+    ÀÄÄÄQuest_3  The Arcane Cipher
+            index.html
+            
