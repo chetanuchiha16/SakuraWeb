@@ -35,3 +35,5 @@ function combineStrings(...char){
   return char.join("")
 }
 console.log(combineStrings('a','b','a','c'))
+
+document.body.innerHTML = `<h1>hello world</h1>`;
