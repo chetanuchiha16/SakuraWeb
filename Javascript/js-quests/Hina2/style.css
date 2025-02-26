@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    animation: slideDown 1.5s ease-in-out;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin: 10px 0 20px;
+    opacity: 0;
+    animation: fadeIn 2.5s ease-in-out forwards;
+}
+
+/* Glowing Button */
+.glow-button {
+    text-decoration: none;
+    font-size: 1.2rem;
+    background: #ff4b2b;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 15px rgba(255, 75, 43, 0.6);
+}
+
+.glow-button:hover {
+    background: #ff5733;
+    box-shadow: 0 0 25px rgba(255, 75, 43, 0.9);
+    transform: scale(1.1);
+}
+
+/* Content Section */
+.content {
+    padding: 100px 20px;
+    background: white;
+    color: #333;
+    border-radius: 50px 50px 0 0;
+    animation: fadeUp 1.5s ease-in-out;
+}
+
+.content h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.content p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}

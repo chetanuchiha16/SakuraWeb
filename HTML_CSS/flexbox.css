@@ -1,0 +1,124 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    border: solid 10px black;
+    /* justify-content:   center; */
+    height: 90vh;
+    /* align-items:center; */
+    /* align-content: center; */
+    /* flex-wrap:wrap; */
+    /* column-gap: 1em; */
+    /* row-gap: 1em; */
+    position: relative;
+    overflow:hidden;
+}
+
+@keyframes slideLeft {
+    50% {
+        transform: translateX(70%) 
+        /* rotate(45deg) */
+    };
+}
+
+@keyframes rotate  {
+    30% {
+        transform: rotateZ(180deg);
+    }
+    
+}
+
+@keyframes grow {
+    50%{transform: scale(1.5,1);}
+}
+
+@keyframes colorchange {
+    50%{background-color: rgb(221, 105, 196);}
+}
+
+@keyframes opacity {
+    50%{opacity: 100%;}
+}
+
+@keyframes glow {
+    50%{box-shadow:0px 0px 10px green}
+}
+.box {
+    display: flex;
+    /* text-align: center; */
+    height: 150px;
+    width: 150px;
+    font-size: 3em;
+    border-radius: 0.15em;
+    text-align: center;
+    /* display:flow-root; */
+    align-items: center;
+    border: 1px black solid;
+    justify-content: center;
+}
+
+#box1 {
+    animation-name:  opacity;
+    animation-duration: 3s;
+    align-self: center;
+    background-color: hsl(160, 100%, 75%);
+    transform: translateX(10%) rotateZ(45deg);
+    opacity: 30%;
+    
+
+}
+
+#box2 {
+    background-color: hsl(231, 100%, 75%);
+    order: -1;
+    animation-name: rotate;
+    animation-duration: 3s;
+}
+
+#box3 {
+    background-color: rgb(255, 127, 238);
+    transform: skew(45deg);
+    animation-name: colorchange;
+    animation-duration: 2s;
+}
+
+#box4 {
+    background-color: rgb(148, 255, 127);
+    transform: scale(1);
+    animation-name: grow;
+    animation-duration: 2s;
+}
+
+#box5 {
+    background-color: bisque;
+    margin-left:90px;
+    align-self:center;
+    /* text-align:center; */
+}
+
+#box5:hover {
+    animation-name: glow;
+    animation-duration: 2s;
+
+}
+.image {
+    position:absolute;
+    left:50%;
+    top:40%;
+}
+.image img{
+    /* display:flow-root; */
+    /* position:absolute; */
+    height: 200px;
+    border: black solid 10px;
+    animation-name: slideLeft;
+    animation-duration: 1s;
+    animation-iteration-count:infinite;
+    animation-direction: alternate;
+    animation-play-state:running;
+    animation-timing-function: linear;
+}
+/* body {
+    background-image: url(levi.png);
+    background-repeat: no-repeat;
+    background-position: center;
+} */
