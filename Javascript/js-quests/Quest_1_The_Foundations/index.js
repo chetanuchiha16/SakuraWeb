@@ -9,7 +9,7 @@ document.getElementById(`myP`).textContent = `This is the first Quest`;
 let age = 20;
 console.log(`the age is ${age} and the type is ${typeof age}`);
 
-let fullName = `Chetan Kishor`;
+let fullName = window.prompt("What is your name")
 document.getElementById(`p1`).textContent = `Your Name is ${fullName}`;
 document.getElementById(`p2`).textContent = age;
 
@@ -25,7 +25,8 @@ document.getElementById(`mySubmit`).onclick = function () {
 let gf;
 document.getElementById(`gfSubmit`).onclick = function() {
   gf = document.getElementById(`gf`).value;
-  document.getElementById(`real`).textContent = `${username} Loves ${gf}`;
+  // document.getElementById(`real`).textContent = `${username} Loves ${gf}`;
+  document.getElementById(`real`).textContent = `${username} Likes ${gf}`;
 }
 
 age = window.prompt(`Enter your age`);
