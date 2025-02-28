@@ -1,14 +1,16 @@
 {
-	"folders": [
-		{
-			"path": "."
-		},
-		{
-			"path": "HTML_CSS"
-		},
-		{
-			"path": "Javascript"
-		}
-	],
-	"settings": {}
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "HTML_CSS"
+    },
+    {
+      "path": "Javascript"
+    }
+  ],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "SakuraWeb"
+  }
 }
