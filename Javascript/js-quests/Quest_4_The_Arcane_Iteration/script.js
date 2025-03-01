@@ -1,7 +1,6 @@
 hello(bye);
 
-sum(display, 1,2);
-
+sum(display, 1, 2);
 
 function sum(callback, a, b) {
   result = a + b;
@@ -19,15 +18,19 @@ function hello(callback) {
 
 function bye(str) {
   // console.log(`hinaaa.. ill never say bye to you`)
-  console.log(str)
+  console.log(str);
 }
 
-
-let arr = [1,2,3,4,5];
+let arr = [1, 2, 3, 4, 5];
 
 arr.forEach(displayEle);
 
 function displayEle(ele) {
   console.log(ele);
-  
 }
+
+function double(element) {
+  console.log(element * 2);
+}
+
+arr.forEach(double);
