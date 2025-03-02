@@ -55,3 +55,34 @@ arr.forEach(displayEle);
 let array = [6, 5, 4, 3, 2, 1];
 array = array.map(element => element * 2)
 array.forEach(displayEle);
+
+function square(element) {
+  return element ** 2;
+}
+
+squares = array.map(square);
+console.log(...squares)
+
+even_squares = squares.filter((element) => {
+  return element % 3 === 0;;
+});
+
+console.log(even_squares)
+
+customReduce = (array) => {
+  prev = array[0];
+  let next;
+  for(let i = 1; i < array.length; i++) {
+    prev = prev + next;
+    next = array[i + 1];
+  }
+  console.log(prev);
+}
+
+sum = squares.reduce((prev, next) => {
+  return prev + next;
+})
+console.log(sum)
+customReduce(squares)
+
+setTimeout(() => console.log(`yokoso`), 3000)
