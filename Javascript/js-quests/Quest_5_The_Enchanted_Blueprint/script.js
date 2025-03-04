@@ -57,6 +57,97 @@ class Shippuden extends Anime{
 
 naruto1 = new Shippuden("Naruto Uzumaki", "Rasengan");
 console.log(Shippuden.author);
-naruto1.attack()
-Shippuden.authorName()
-console.log(naruto1.country)
+naruto1.attack();
+Shippuden.authorName();
+console.log(naruto1.country);
+
+let array = [1, 2, 3, 4];
+[array[0], array[3]] = [array[3], array[0]];
+console.log(...array);
+let a = 1;
+let b = 2;
+[a, b] = [b, a];
+
+alpha = ['a', 'b', 'c', 'd'];
+[a, b, c, d] = alpha;
+console.log(a,b,c,d)
+
+console.log(a,b);
+
+const obj = {
+    name:'name',
+    age:'age'
+}
+console.log(obj.name,obj.age)
+
+let {name, age} = obj;
+
+console.log(name, age);
+
+function display({name, age}) {
+    console.log(name, age);
+}
+display(obj)
+
+obj1 = {
+    name: "Chetan",
+    age: 20,
+    "address" : {
+        street: "indus",
+        block: "E",
+    }
+}
+console.log(obj1.address.street);
+console.log(obj1.address["street"]);
+
+// console.log([...obj1])
+for(const prop in obj1.address) {
+    console.log(obj1.address[prop]);
+}
+
+class Address {
+    constructor(street, block, door) {
+        this.street = street;
+        this.block = block;
+        this.door = door;
+    }
+
+}
+
+class Person {
+    constructor(name, age, ...address) {
+        this.name = name;
+        this.agee = age;
+        this.address = new Address(...address);
+    }
+}
+
+sasuke = new Person("Sasuke Uchiha", 20, "abc","def", "konoha")
+for(const prop in sasuke) {
+    console.log(sasuke[prop]);
+}
+
+ninjas = [
+    {name:"naruto uzumaki",rival: "Sasuke Uchiha"},
+    {name:"Sakura",rival: "ino yamanaka"},
+    {name:"Neji",rival: "Rock Lee"},
+]
+console.log(ninjas[0].name, ninjas[0].rival);
+ninjas.  forEach(element => {
+    console.log(element.name, element.rival);
+});
+
+ninjaNames = ninjas.map(element => {
+    return element.name;
+})
+console.log(...ninjaNames);
+
+ninjaRivals = ninjas.map(element => {
+    return element.rival;
+})
+console.log(...ninjaRivals);
+
+namef = ninjaNames.reduce((acc, next) => 
+     acc.length > next.length ? acc : next // {} => must return - My Hina
+)
+console.log(namef)
