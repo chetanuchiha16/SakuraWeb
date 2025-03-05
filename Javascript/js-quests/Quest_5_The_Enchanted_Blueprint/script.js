@@ -151,3 +151,20 @@ namef = ninjaNames.reduce((acc, next) =>
      acc.length > next.length ? acc : next // {} => must return - My Hina
 )
 console.log(namef)
+
+const candies = [
+    { name: "Lollipop", sweetness: 5 },
+    { name: "Chocolate", sweetness: 10 },
+    { name: "Gummy Bear", sweetness: 7 },
+    { name: "Marshmallow", sweetness: 8 }
+  ];
+console.log(candies[0].sweetness)
+const total_sweetness =  candies.reduce((acc, next) => acc + next.sweetness, 0);
+ console.log(`Total sweetness: ${total_sweetness}`)
+
+ candies.sort((a, b) => a.name.localeCompare(b.name))
+ console.log(candies);
+ candies.sort((a, b) => a.sweetness - b.sweetness)
+ console.log(candies)
+
+ 
