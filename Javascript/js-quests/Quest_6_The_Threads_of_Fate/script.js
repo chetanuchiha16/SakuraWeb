@@ -34,3 +34,32 @@ function cancel() {
 }
 
 console.log(PI, str)
+
+function func(callback) {
+    setTimeout(() => {
+        console.log("Yokoso");
+        callback()
+
+    }, 3000)
+}
+
+function func1() {
+    console.log("Dattebayo");
+    console.log("Chetan wa Hina no suki desu")
+}
+
+func(func1);
+
+try{
+    console.log("yokoso");
+    let x = window.prompt("enter a number")
+    if (x == 1) {
+        throw new Error("no 1 lol");
+    }
+}
+catch(e) {
+    console.log(e);
+}
+finally {
+    console.log("last line of the code");
+}
