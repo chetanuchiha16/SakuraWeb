@@ -2,7 +2,7 @@ console.dir(document);
 document.body.style.backgroundColor = "hsl(249, 100.00%, 76.30%)";
 document.body.innerHTML += "<br><h1>Yokoso My</h1>"
 
-userName = "<h1>Hina<h1>";
+userName = "<h1>Hina</h1>";
 document.body.innerHTML += userName === ""? "<br>Guest" : userName;
 hello = document.getElementById(`hello`)
 
@@ -60,4 +60,84 @@ const animesn = document.getElementById("aot");
 animesn.nextElementSibling.style.backgroundColor = "red"
 
 const animesp = document.getElementById("aot");
-animesp.previousElementSibling.style.backgroundColor = "orange"
+animesp.previousElementSibling.style.backgroundColor = "orange";
+
+animesp.parentElement.style.border = "black solid 10px"
+animesp.parentElement.children[7].style.border = "black solid 2px"
+
+h1 = document.createElement("h1")
+h1.textContent = "I Love Hina";
+document.body.append(h1)
+h1.style.color = "hsl(240, 100%, 50%)"
+document.body.prepend(h1)
+document.getElementById("box1").prepend(h1)
+
+
+box4 = document.getElementById("box4");
+document.body.insertBefore(h1, box4);
+
+// box = document.querySelectorAll("#box1");
+box = document.querySelectorAll(".box");
+document.body.insertBefore(h1, box[0])
+
+suki = document.createElement("h1");
+suki.textContent = "Hina, dai dai dai suki";
+document.body.insertBefore(suki, box[1])
+
+
+// #list
+list = document.getElementById("hashira");
+newHashira = document.createElement("li");
+newHashira.textContent = "Giyu Tomiyoka";
+// list.append(newHashira)
+list.insertBefore(newHashira, list.children[2]);
+
+// newHashira.id = "tomiyoka";
+list.removeChild(newHashira);
+
+// box4.textContent = "Click Here to Kiss Chetan(only for Hina)";
+
+box4.addEventListener("click", (event) => {
+    event.target.style.backgroundColor = "pink";
+    // event.target.textContent = "💋"
+    event.target.textContent = "😊"
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// if (navigator.userAgent.includes("Windows") || navigator.userAgent.includes("Mac")) {
+//     let h1 = document.createElement("h1");
+//     h1.textContent = "I Love Hina";
+//     document.body.append(h1);
+// }
