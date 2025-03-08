@@ -1,0 +1,25 @@
+#hina {
+    width: 100px;
+    height:100px;
+    background-color: bisque;
+    color:blue;
+    display:flex;
+    position:absolute;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease-out ;
+}
+#chetan {
+    width: 100px;
+    height:100px;
+    background-color: bisque;
+    color:rgb(0, 0, 0);
+    display:flex;
+    position:absolute;
+    justify-content: center;
+    align-items: center;
+    top: 50vh;
+    left:50vh;
+    /* justify-self: center; */
+    /* align-self: center; */
+}

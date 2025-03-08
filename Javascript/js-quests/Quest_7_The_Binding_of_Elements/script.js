@@ -95,24 +95,81 @@ list.insertBefore(newHashira, list.children[2]);
 // newHashira.id = "tomiyoka";
 list.removeChild(newHashira);
 
-// box4.textContent = "Click Here to Kiss Chetan(only for Hina)";
+box4.textContent = "Click Here to Kiss Chetan (only for Hina)";
 
 box4.addEventListener("click", (event) => {
     event.target.style.backgroundColor = "pink";
-    // event.target.textContent = "💋"
-    event.target.textContent = "😊"
+    event.target.textContent = "💋 😊👉🏻👈🏻"
+    // event.target.textContent = "😊"
+})
+
+box4.addEventListener("mouseover", event => {
+    event.target.style.backgroundColor = "hsl(318, 72.40%, 64.50%)";
+    event.target.textContent = "you'll really kiss me ? 👉🏻👈🏻";
+
+})
+
+box4.addEventListener("mouseout", event => {
+    event.target.style.backgroundColor = "blue";
+    event.target.style.color = "#ffea95";  // Soft yellow for warmth!
+    event.target.textContent = "please dont go 😢"
+})
+
+Hug = document.createElement("h1");
+Hug.textContent = "press H to Hug Chetan (Only for Hina)";
+document.body.append(Hug)
+
+// document.addEventListener("keydown", event => {                    //Better one Hina gets closer
+//     if(event.key == "h") {
+//         document.body.style.backgroundImage = "url(myHina.jpg)"
+//         document.body.style.backgroundRepeat = "no-repeat";
+//         document.body.style.backgroundSize = "cover";
+//         document.body.style.backgroundPosition = "center";
+//         newH1 = document.createElement("h1");
+//         newH1.textContent = " hmm Hina 🤗 I Love You";
+//         document.body.append(newH1);
+//     }
+//     console.log(event.key)
+// })
+
+document.addEventListener("keydown", event => {
+    if(event.key == "h") {
+        document.body.style.backgroundImage = "url(myHina.jpg)"
+        document.body.style.backgroundRepeat = "no-repeat";
+        document.body.style.backgroundSize = "cover";
+        document.body.style.backgroundPosition = "center";
+        // newH1 = document.createElement("h1");
+        Hug.textContent = " hmm Hina 🤗 I Love You";
+        // document.body.append(newH1);
+    }
+    console.log(event.key)
+})
+
+document.addEventListener("keyup", event => {
+    if(event.key == "h") {
+        document.body.style.background = "none";
+        Hug.textContent = "Hina dont goo lets 😭 Hug Forever"
+    }
 })
 
 
 
+hideButton = document.getElementById("hide-button");
+hideImage = document.getElementById("hide-image");
+hideImage.style.display = "block"
 
+hideButton.addEventListener("click", event => {
+    // if(hideImage.style.display !== "none") {
+    if(hideImage.style.visibility !== "hidden") {
+        hideImage.style.visibility = "hidden";
+        event.target.textContent = "Click here to Come out of Chetan's Shirt"
+    }
+    else {
+        hideImage.style.visibility = "visible"
+        event.target.textContent = "Click here to get inside Chetan's Shirt"
+    }
 
-
-
-
-
-
-
+})
 
 
 
