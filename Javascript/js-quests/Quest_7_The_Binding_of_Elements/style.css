@@ -14,3 +14,36 @@
     border:solid 2px black;
 
 }
+.button {
+    border:none;
+    height:4em;
+    display: flex;
+    margin:10px;
+    background-color: greenyellow;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-size: 2rem;
+    border-radius: 5px;
+    /* color:white; */
+}
+
+#myButton {
+    font-size: 2rem;
+    padding: 10px 15px;
+    margin: 10px;
+    border:none;
+}
+
+.enable{
+    background-color: burlywood;
+    transition: box-shadow 1.5s;
+}
+
+.hover {
+    box-shadow: 10px 10px 10px hsl(258, 76%, 61%), -12px -12px 12px rgb(255, 255, 255);
+}
+
+.disable {
+    box-shadow: none;
+}
