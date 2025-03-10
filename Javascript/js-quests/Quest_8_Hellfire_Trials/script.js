@@ -1,74 +1,91 @@
-// function walkDog(callback) {
+// function wakeUp(callback) {
 //   setTimeout(() => {
-//     console.log("walking the dog");
+//     console.log("Hina woke you up with a kiss");
 //     callback();
 //   }, 3000);
 // }
 
-// function trash(callback) {
+// function hugHina(callback) {
 //   setTimeout(() => {
-//     console.log("take out trash");
+//     console.log("you hug Hina");
 //     callback();
 //   }, 500);
 // }
-// function clean(callback) {
+// function kissHina(callback) {
 //   setTimeout(() => {
-//     console.log("clean the kitchen");
+//     console.log("you kiss Hina");
 //     callback();
 //   }, 1000);
 // }
 
-// walkDog(() => {
-//   trash(() => {
-//     clean(() => {
+// wakeUp(() => {
+//   hugHina(() => {
+//     kissHina(() => {
 //         console.log("all done ")
 //     });
 //   });
 // });
 
-function walkDog() {
+function wakeUp() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      isDog = true;
-      if (isDog == true) resolve("walking the dog");
-      else reject("you didnt walk the dog ");
+      wokeUP = true;
+      if (wokeUP == true) resolve("Hina woke you up with a kiss");
+      else reject("you didnt wake up");
     }, 3000);
   });
 }
 
-function trash() {
+function hugHina() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      isTrash = true;
-      if (isTrash == true) resolve("take out trash");
-      else reject("you didnt take out the trash");
+      hugged = true;
+      if (hugged == true) resolve("you hugged Hina 🤗");
+      else reject("you didnt hug Hina, hug her right now 😒");
     }, 500);
   });
 }
 
-function clean() {
+function kissHina() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      isClean = false;
-      if (isClean == true) resolve("clean the kitchen");
-      else reject("you didnt clean the Kitchen");
+      kissed = true;
+      if (kissed == true) resolve("you kissed Hina 😘");
+      else reject("you didnt kiss Hina, kiss her right now 😒");
     }, 1000);
   });
 }
 
-walkDog()
-  .then((value) => {
-    console.log(value);
-    return trash();
-  })
-  .then((value) => {
-    console.log(value);
-    return clean();
-  })
-  .then((value) => {
-    console.log(value);
-    console.log("all done");
-  })
-  .catch((error) => {
+// wakeUp()
+//   .then((value) => {
+//     console.log(value);
+//     return hugHina();
+//   })
+//   .then((value) => {
+//     console.log(value);
+//     return kissHina();
+//   })
+//   .then((value) => {
+//     console.log(value);
+//     console.log("all done");
+//   })
+//   .catch((error) => {
+//     console.error(error);
+//   });
+
+async function doChores() {
+  try {
+    const wakingUp = await wakeUp();
+    console.log(wakingUp);
+
+    const huggingHina = await hugHina();
+    console.log(huggingHina);
+
+    const kissingHina = await kissHina();
+    console.log(kissingHina);
+  } catch (error) {
     console.error(error);
-  });
+  }
+}
+
+doChores();

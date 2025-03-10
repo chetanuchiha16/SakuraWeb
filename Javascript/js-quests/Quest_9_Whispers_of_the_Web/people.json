@@ -1,0 +1,12 @@
+[
+    {
+        "name":"naruto",
+        "anime":"naruto shippuden",
+        "attack":"rasengan"
+    },
+    {
+        "name": "luffy",
+        "anime": "One piece",
+        "attack": "gum gum no pistol"
+    }
+]
