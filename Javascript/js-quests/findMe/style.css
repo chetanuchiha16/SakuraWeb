@@ -1,3 +1,7 @@
+*{
+  transition: background-color 1s ease-out;
+}
+
 #hina {
   width: 100px;
   height: 100px;
@@ -8,6 +12,7 @@
   justify-content: center;
   align-items: center;
   transition: transform 0.5s ease-out;
+  /* bottom:50px; */
 }
 #chetan {
   width: 100px;
@@ -15,6 +20,7 @@
   background-color: bisque;
   color: rgb(0, 0, 0);
   display: flex;
+  /* animation: beat 3s infinite; */
   position: absolute;
   justify-content: center;
   align-items: center;
@@ -22,10 +28,28 @@
   left: 50vh;
   /* justify-self: center; */
   /* align-self: center; */
-  animation: beat 3s infinite;
+  /* animation: beat 3s infinite; */
 }
+
+
 @keyframes beat {
-  50% {
-    transform: scale(1.05);
+  0%,
+  100% {
+    transform: scale(1);
   }
+  50% {
+    transform: scale(1.1); /* Slight increase to feel soft */
+  }
+}
+
+
+/* .animation{
+} */
+/* .hug {
+  animation: beat 3s ;
+  background-color: rgb(251, 93, 120) !important;
+} */
+.hug {
+  background-color: rgb(251, 93, 120) !important;
+  box-shadow: 0 0 20px rgb(255, 100, 120); /* Soft glow */
 }

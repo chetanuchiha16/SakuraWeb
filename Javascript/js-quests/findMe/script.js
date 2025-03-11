@@ -1,20 +1,23 @@
 hina = document.getElementById("hina");
 chetan = document.getElementById("chetan");
 
-function isColiding() {
-    hinaPos = hina.getBoundingClientRect();
-    chetanPos = chetan.getBoundingClientRect();
-    console.log(chetanPos)
-    console.log(hinaPos)
+function isColiding(chetan, hina) {
+  hinaPos = hina.getBoundingClientRect();
+  chetanPos = chetan.getBoundingClientRect();
+  console.log(chetanPos);
+  console.log(hinaPos);
 
-    return (
-        hinaPos.top > chetanPos.top
-    )
-    
+  return !(
+    hinaPos.top > chetanPos.bottom ||
+    hinaPos.left > chetanPos.right ||
+    hinaPos.bottom < chetanPos.top ||
+    hinaPos.right < chetanPos.left
+  );
 }
 x = 0;
 y = 0;
 moveAmount = 5;
+// let hugging = false;
 document.addEventListener("keydown", (event) => {
   if (event.key.startsWith("Arrow")) {
     switch (event.key) {
@@ -32,6 +35,20 @@ document.addEventListener("keydown", (event) => {
         break;
     }
     hina.style.transform = `translate(${x}px, ${y}px)`;
+    console.log(isColiding(chetan, hina));
+    const hugging = isColiding(chetan, hina)
+    if (hugging) {
+      hina.classList.add("hug");
+      chetan.classList.add("hug");
+      // hugging = true;
+    }else {
+      setTimeout(() => {
+        chetan.classList.remove("hug");
+        hina.classList.remove("hug");
+      }, 3000)
+
+    }
+    console.log(chetan.class);
   }
 });
 
