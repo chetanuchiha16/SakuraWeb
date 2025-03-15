@@ -2,9 +2,10 @@ message = document.getElementById("message");
 // document.body.style.backgroundRepeat = "no-repeat";
 // document.body.style.backgroundSize = "cover";
 
-message.textContent = "Press b";
+message.textContent = "Press b to begin";
+let step = 0;
 document.addEventListener("keydown", (event) => {
-  if (event.key === "b") {
+  if (step === 0 && event.key === "b") {
     document.body.style.backgroundImage = `url(images/welcome.jpg)`;
     audio = document.createElement("audio");
     audiosrc = document.createElement("source");
@@ -20,21 +21,26 @@ document.addEventListener("keydown", (event) => {
       message.textContent = "Press n";
     }
     text();
-  } else if (event.key === "n") {
+    step = 1;
+  } else if (step === 1 && event.key === "n") {
     document.body.style.backgroundImage = `url(images/narutoSasuke.png)`;
     // document.body.style.backgroundPosition = "center";
     console.log(event.key);
+    step = 2;
     message.textContent = "press t";
-  } else if (event.key === "t") {
+  } else if (step === 2 && event.key === "t") {
     document.body.style.backgroundImage = `url(images/Thorfin.png)`;
+    step = 3;
     message.textContent = "press l";
-  } else if (event.key === "l") {
+  } else if (step === 3 && event.key === "l") {
     document.body.style.backgroundImage = `url(images/luffy.jpeg)`;
+    step = 4;
     message.textContent = "press g";
-  } else if (event.key === "g") {
+  } else if (step === 4 && event.key === "g") {
     document.body.style.backgroundImage = `url(images/garp.png)`;
+    step = 6;
     message.textContent = "press v";
-  } else if (event.key === "v") {
+  } else if (step === 6 && event.key === "v") {
     message.textContent = "";
     document.body.style.backgroundImage = `url(images/hbd.jpeg)`;
     video = document.createElement("video");

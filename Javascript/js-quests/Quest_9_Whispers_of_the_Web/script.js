@@ -80,3 +80,9 @@ async function anime() {
 // fetch('https://api.jikan.moe/v4/top/anime?type=ova')
 //     .then(response => response.json())
 //     .then(quote => console.log(quote))
+
+// let i = 0
+// setInterval(() => {
+//   console.log(i);
+//   i++;
+// }, 500)
